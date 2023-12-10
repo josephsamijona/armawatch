@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Responsive Dashboard Design #2 | AsmrProg</title>
 </head>
 
@@ -18,12 +18,12 @@
             <div class="logo-name"><span>Asmr</span>Prog</div>
         </a>
         <ul class="side-menu">
-            <li><a href="index.html"><i class='bx bx-bar-chart'></i>Tableau de Bord</a></li>
-            <li><a href="map.html"><i class='bx bx-map'></i>Carte Interactive</a></li>
-            <li><a href="cctv.html"><i class='bx bx-video'></i>Vidéos en Direct</a></li>
-            <li class="active"><a href="rapport.html"><i class='bx bx-list-ul'></i>Rapports</a></li>
-            <li><a href="setting.html"><i class='bx bx-cog'></i>Setting</a></li>
-            <li><a href="analytics.html"><i class='bx bx-analyse'></i>Analytics</a></li>
+            <li><a href="{{ url_for('dashboard') }}"><i class='bx bx-bar-chart'></i>Tableau de Bord</a></li>
+            <li><a href="{{ url_for('map') }}"><i class='bx bx-map'></i>Carte Interactive</a></li>
+            <li><a href="{{ url_for('cctv') }}"><i class='bx bx-video'></i>Vidéos en Direct</a></li>
+            <li class="active" ><a href="{{ url_for('rapport') }}"><i class='bx bx-list-ul'></i>Rapports</a></li>
+            <li><a href="{{ url_for('setting') }}"><i class='bx bx-cog'></i>Setting</a></li>
+            <li><a href="{{ url_for('analytic') }}"><i class='bx bx-analyse'></i>Analytics</a></li>
         </ul>
         <ul class="side-menu">
             <li>
@@ -102,7 +102,7 @@
 
     </div>
 
-    <script src="index.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
 
 </html>
