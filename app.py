@@ -177,15 +177,35 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-
-
-
-
-
 @app.route('/dashboard')
 @login_required
 def dashboard():
     return render_template('dashboard.html')
+
+@app.route('/cctv')
+@login_required
+def cctv():
+    return render_template('cctv.html')
+
+@app.route('/map')
+@login_required
+def map():
+    return render_template('map.html')
+
+@app.route('/rapport')
+@login_required
+def rapport():
+    return render_template('rapport.html')
+
+@app.route('/setting')
+@login_required
+def setting():
+    return render_template('setting.html')
+
+@app.route('/analytic')
+@login_required
+def analytic():
+    return render_template('analytic.html')
 
 @app.route('/logout')
 @login_required

@@ -1,0 +1,8 @@
+Flask
+Flask-WTF
+SQLAlchemy
+Flask-SQLAlchemy
+Flask-Mail
+Flask-Login
+WTForms
+opencv-python
