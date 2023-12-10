@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-    <title>Responsive Dashboard Design #2 | AsmrProg</title>
+    <title>système de sécurité | ARMAWATCH</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <div class="sidebar">
         <a href="#" class="logo">
             <i class='bx bx-code-alt'></i>
-            <div class="logo-name"><span>Asmr</span>Prog</div>
+            <div class="logo-name"><span>ARMA</span>WATCH</div>
         </a>
         <ul class="side-menu">
             <li><a href="{{ url_for('dashboard') }}"><i class='bx bx-bar-chart'></i>Tableau de Bord</a></li>
@@ -29,7 +29,7 @@
         </ul>
         <ul class="side-menu">
             <li>
-                <a href="#" class="logout">
+                <a href="{{url_for('logout')}}" class="logout">
                     <i class='bx bx-log-out-circle'></i>
                     Logout
                 </a>
@@ -74,10 +74,7 @@
                         <li><a href="#" class="active">Carte Interactive</a></li>
                     </ul>
                 </div>
-                <a href="#" class="report">
-                    <i class='bx bx-cloud-download'></i>
-                    <span>Download CSV</span>
-                </a>
+                 
             </div>
 
             <!-- Main Content of Map Page -->
