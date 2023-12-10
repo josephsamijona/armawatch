@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Dashboard Design #2 | AsmrProg</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="logo">
+            <i class='bx bx-code-alt'></i>
+            <div class="logo-name"><span>Asmr</span>Prog</div>
+        </a>
+        <ul class="side-menu">
+            <li><a href="index.html"><i class='bx bx-bar-chart'></i>Tableau de Bord</a></li>
+            <li><a href="map.html"><i class='bx bx-map'></i>Carte Interactive</a></li>
+            <li><a href="cctv.html"><i class='bx bx-video'></i>Vidéos en Direct</a></li>
+            <li><a href="rapport.html"><i class='bx bx-list-ul'></i>Rapports</a></li>
+            <li class="active"><a href="setting.html"><i class='bx bx-cog'></i>Setting</a></li>
+            <li><a href="analytics.html"><i class='bx bx-analyse'></i>Analytics</a></li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bx-log-out-circle'></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">12</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="images/logo.png">
+            </a>
+        </nav>
+
+        <!-- End of Navbar -->
+
+        <main>
+            <div class="header">
+                <div class="left">
+                    <h1>Setting</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="#">Tableau de Bord</a></li>
+                        /
+                        <li><a href="#" class="active">Setting</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="report">
+                    <i class='bx bx-cloud-download'></i>
+                    <span>Download CSV</span>
+                </a>
+            </div>
+
+            <!-- Main Content of Setting Page -->
+            <div class="setting-content">
+                <!-- Configuration des paramètres -->
+                <div class="setting-section">
+                    <h2>Configuration des paramètres</h2>
+                    <!-- Your content goes here -->
+                </div>
+
+                <!-- Autres éléments de configuration -->
+                <div class="setting-section">
+                    <h2>Autres éléments de configuration</h2>
+                    <!-- Your content goes here -->
+                </div>
+            </div>
+            <!-- End of Main Content -->
+
+        </main>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
