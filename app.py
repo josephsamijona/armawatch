@@ -147,14 +147,14 @@ def login():
             log_user_activity('Connexion réussie')
             collect_connection_info(user_id=user.id, success=True)
             collect_visitor_info('login')
-            return redirect(url_for('verify_otp'))
+            return redirect(url_for('otp'))
         else:
             flash('Nom d\'utilisateur ou mot de passe incorrect.', 'danger')
             collect_connection_info(user_id=None, success=False)
 
     return render_template('login.html', form=form)
 
-@app.route('/verify_otp', methods=['GET', 'POST'])
+@app.route('/otp', methods=['GET', 'POST'])
 @login_required
 def verify_otp():
     form = OTPForm()
@@ -170,7 +170,7 @@ def verify_otp():
         else:
             flash('Code OTP incorrect. Veuillez réessayer.', 'danger')
 
-    return render_template('verify_otp.html', form=form)
+    return render_template('otp.html', form=form)
 
 @login_manager.user_loader
 def load_user(user_id):
