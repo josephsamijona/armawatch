@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Responsive Dashboard Design #2 | AsmrProg</title>
 </head>
 
@@ -98,7 +98,7 @@
 
     </div>
 
-    <script src="index.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
 
 </html>
