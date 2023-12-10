@@ -156,7 +156,7 @@ def login():
 
 @app.route('/otp', methods=['GET', 'POST'])
 @login_required
-def verify_otp():
+def otp():
     form = OTPForm()
 
     if form.validate_on_submit():
