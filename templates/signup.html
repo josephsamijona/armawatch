@@ -1,0 +1,46 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/inscription.css') }}">
+  <title>ARMAWATCH</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form method="post">
+                    <h2>Inscription</h2>
+                    {{ form.hidden_tag() }}
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        {{ form.username.label }}
+                        {{ form.username(class="form-control") }}
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        {{ form.email.label }}
+                        {{ form.email(class="form-control") }}
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        {{ form.password.label }}
+                        {{ form.password(class="form-control") }}
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        {{ form.confirm_password.label }}
+                        {{ form.confirm_password(class="form-control") }}
+                    </div>
+                    <button type="submit">{{ form.submit.label }}</button>
+                    <div class="register">
+                        <p>Vous avez déjà un compte ? <a href="{{ url_for('login') }}">>Se connecter</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

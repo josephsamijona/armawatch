@@ -1,0 +1,31 @@
+<!-- double_auth.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/double_auth.css') }}">
+  <title>HASH TECHIE OFFICIEL</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form method="post">
+                    <h2>Double Authentification</h2>
+                    {{ form.hidden_tag() }}
+                    <div class="inputbox">
+                        <ion-icon name="key-outline"></ion-icon>
+                        {{ form.otp.label }}
+                        {{ form.otp(class="form-control") }}
+                    </div>
+                    <button type="submit">{{ form.submit.label }}</button>
+                    <div class="register">
+                        <p>Retour à <a href="{{ url_for('login') }}">la connexion</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
