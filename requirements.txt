@@ -6,3 +6,4 @@ Flask-Mail
 Flask-Login
 WTForms
 opencv-python
+Flask-SocketIO
